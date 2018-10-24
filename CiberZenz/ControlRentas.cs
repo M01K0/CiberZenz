@@ -17,7 +17,9 @@ namespace CiberZenz
             InitializeComponent();
         }
 
-
-
+        private void Btn_Cerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
