@@ -72,7 +72,7 @@ namespace CiberZenz
         private void AbrirFormEnPanel<Forms>() where Forms : Form, new()
         {
             Form formulario;
-            formulario = panelContenedor.Controls.OfType<Forms>().FirstOrDefault();
+            formulario = Panel_Contenedor.Controls.OfType<Forms>().FirstOrDefault();
 
             //si el formulario/instancia no existe, creamos nueva instancia y mostramos
             if (formulario == null)
@@ -81,8 +81,8 @@ namespace CiberZenz
                 formulario.TopLevel = false;
                 //formulario.FormBorderStyle = FormBorderStyle.None;
                 //formulario.Dock = DockStyle.Fill;
-                panelContenedor.Controls.Add(formulario);
-                panelContenedor.Tag = formulario;
+                Panel_Contenedor.Controls.Add(formulario);
+                Panel_Contenedor.Tag = formulario;
                 formulario.Show();
 
                 formulario.BringToFront();
@@ -105,12 +105,12 @@ namespace CiberZenz
 
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
-            if (Application.OpenForms["Form1"] == null)
-                button1.BackColor = Color.FromArgb(4, 41, 68);
-            if (Application.OpenForms["Form2"] == null)
-                button2.BackColor = Color.FromArgb(4, 41, 68);
-            if (Application.OpenForms["Form3"] == null)
-                button3.BackColor = Color.FromArgb(4, 41, 68);
+            //if (Application.OpenForms["Form1"] == null)
+            //    button1.BackColor = Color.FromArgb(4, 41, 68);
+            //if (Application.OpenForms["Form2"] == null)
+            //    button2.BackColor = Color.FromArgb(4, 41, 68);
+            //if (Application.OpenForms["Form3"] == null)
+            //    button3.BackColor = Color.FromArgb(4, 41, 68);
         }
 
 
